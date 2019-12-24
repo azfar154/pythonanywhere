@@ -2,11 +2,11 @@ from flask import Flask,request,render_template,redirect,flash,url_for
 from flask_googlemaps import GoogleMaps
 import stripe
 app = Flask(__name__)
-account_sid= 'ACe34a5e5038f0edf5fc936d013faceebc'
-auth_token= '0b0caf5ae521d9d55dbd8d61e0ce3ee9'
+account_sid= ''
+auth_token= ''
 stripe_keys = {
-  'secret_key': 'sk_test_BjclD9riIOhVZG8kIZG7R7Sm00lGarjEXX',
-  'publishable_key': 'pk_test_EBHYNqdWeJAZOpItEq8DUzjF00Qje3UdGg'
+  'secret_key': '',
+  'publishable_key': ''
 }
 stripe.api_key = stripe_keys['secret_key']
 from twilio.rest import Client
