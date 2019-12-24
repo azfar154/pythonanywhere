@@ -1,5 +1,4 @@
 from flask import Flask,request,render_template,redirect,flash,url_for
-from flask_googlemaps import GoogleMaps
 import stripe
 app = Flask(__name__)
 account_sid= ''
