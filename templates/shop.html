@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content%}
+<div>
+    <h1>Texting Service</h1>
+    <h2>Buy for $500.00</h2>
+    <form action="/pay" method="post">
+      <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="{{ key }}"
+        data-description="A Flask Charge"
+        data-amount="50000"
+        data-locale="auto">
+      </script>
+    </form>
+  </div>
+  <div>
+      <h1>Pay as you go</h1>
+      <h2>$20</h2>
+      <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="{{ key }}"
+        data-description="A Flask Charge"
+        data-amount="50000"
+        data-locale="auto">
+      </script>
+  </div>
+  <div>
+      <h1>Donate</h1>
+      <h2>$1000000</h2>
+      <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="{{ key }}"
+        data-description="A Flask Charge"
+        data-amount="50000"
+        data-locale="auto">
+      </script>
+  </div>
+{%endblock content%}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" action= "">
+    <div class="form-group">
+        <label>Longtitude</label>
+        <input type="text" name = "longtitude" class="form-control" placeholder="Enter longtitude">
+        <small class="form-text text-muted">Please enter the longtitude</small>
+        </div>
+    <div class="form-group">
+        <label>Latitude</label>
+        <input type="text" name = "latitude" class="form-control" placeholder='Enter the latitude'>
+        </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock content %}

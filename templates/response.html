@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content%}
+<h1 class="text-justify font-size:15px;">Country Code: <br><span class="text-muted" style="font-size:15px;margin-left:70px;">{{full_list[0]}}</span></h1>
+<br>
+<h1 class="text-justify">Name: <br><span class="text-muted" style="font-size:15px;margin-left:70px;">{{full_list[2]}}</span></h1>
+<br
+{% if full_list[1] != "not-requested"%}
+<h2 class="text-justify">Carrier: <br> <span class="text-muted" style="font-size:15px;margin-left:70px;">Name: {{full_list[1]['name']}}</span></h2>
+<h1 class="text-muted" style="font-size:15px;margin-left:70px;">Type: {{full_list[1]['type']}}</h1>
+<h1 class="text-muted" style="font-size:15px;margin-left:70px;">Country_code: {{full_list[1]['mobile_country_code']}}</h1>
+<h1 class="text-muted" style="font-size:15px;margin-left:70px;"> Network_code: {{full_list[1]['mobile_network_code']}}</h1>
+{%endif%}
+<h1 class="text-muted"> This how you can do this with twilio</h1>
+<br>
+<code>
+    <br>from twilio.rest import Client
+    <br>
+    <var>account_sid</var> = 'yoursid'
+    <br>
+    auth_token = 'yourauth'
+    <br>
+    client = Client(account_sid,auth_token)
+    <br>
+    type ='thetypeyouwant'
+    <br>
+    carrier = client.lookups.phone_numbers(phone_number).fetch(type=type)
+    <br>
+</code>
+{% endblock content %}
